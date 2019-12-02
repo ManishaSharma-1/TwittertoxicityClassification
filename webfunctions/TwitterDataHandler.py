@@ -6,8 +6,8 @@ import json
 
 
 class TwitterDataHandler:
-    def __init__(self):
-        pass
+    def __init__(self,model):
+        self.model = model
     
     def getTweetsFromUser(self,username):
         '''takes in username and returns a dictionary consisting of all tweets received from the twitter api'''
@@ -54,8 +54,9 @@ class TwitterDataHandler:
         return tweet_text
 
     def scoreTweets(self,tweets):
-        model = Model()
-        return np.mean([model.score(k) for k, v in tweets.items()])
+        scores = [self.model.score(str(k)) for k, v in tweets.items()]
+        print(scores)
+        return np.mean(scores)
 
     def scoreUser(self,username):
         return self.getTweetsFromUser(username)
