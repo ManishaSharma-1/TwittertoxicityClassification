@@ -3,6 +3,7 @@ from flask import render_template
 
 from Toxicity.Model_Word2Vec import Model_Word2Vec
 
+
 from webfunctions.TwitterDataHandler import TwitterDataHandler
 
 app = Flask(__name__)
