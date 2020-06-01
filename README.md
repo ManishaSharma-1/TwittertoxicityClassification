@@ -10,4 +10,4 @@ Before running make sure you have set up a twitter [api access token](https://de
 
 ## Running BERT
 
-Download the model [here](https://drive.google.com/open?id=1q2F-9B7ON0XDjz8mYUBPFpCGT9bmPThC). Place the file in [Toxicity/model/](Toxicity/model/). You can then run `python test_bert_model.py` from the root.
+Download the model [here](https://drive.google.com/open?id=1q2F-9B7ON0XDjz8mYUBPFpCGT9bmPThC). Place the file in [Toxicity/model/](Toxicity/model/). You can then run `python test_bert_model.py` from the root.# TwittertoxicityClassification
