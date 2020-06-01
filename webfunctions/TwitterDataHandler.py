@@ -49,12 +49,12 @@ class TwitterDataHandler:
             elif strs[0][0]=='@':
                 continue
             tweet_text[i] = t.get('text', '')
-            if len(tweet_text) == 10:
-                break
+            # if len(tweet_text) == 10:
+            #     break
         return tweet_text
 
     def scoreTweets(self,tweets):
-        scores = [self.model.score(str(k)) for k, v in tweets.items()]
+        scores = [self.model.score(str(v)) for k, v in tweets.items()]
         print(scores)
         return np.mean(scores)
 
